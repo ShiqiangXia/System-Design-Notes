@@ -12,7 +12,7 @@ jobs:
       - name: Notion2Github
         uses: younho9/notion2github@v1.1.0
         with:
-          database-url: 'https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad'
+          database-url: 'https://www.notion.so/Notes-12435bf5f7ee44d6bbf0e37b40425ee5'
           docs-directory: docs
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
