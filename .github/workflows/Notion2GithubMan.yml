@@ -14,7 +14,7 @@ jobs:
       - name: Notion2Github
         uses: younho9/notion2github@v1.1.0
         with:
-          database-url: 'https://www.notion.so/Grokking-the-System-Design-Interview-2a113be513b9424c8c9b14ed28f70d3b'
+          database-url: 'https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad'
           docs-directory: docs
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
