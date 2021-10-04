@@ -1,0 +1,50 @@
+# Web Application and Software Architecture 101
+
+[Link](https://www.educative.io/courses/web-application-software-architecture-101)
+
+- Tier  (1-tier, 2-tier, N-tiers)
+- Client-Server Mode, REST API
+- Scalability (vertical horizontal)
+- High Availability ( fault tolerance (micro service), redundancy(active-passible model) replication( active-active model) )
+- Load Balancing
+    - DNS load  balancer (domain name system —> IP address)
+    - Hardware load balancer (expensive)
+    - software load balancer (take account the server's compute and traffic ability:  e.g  CPU and memory utilization)
+- Monolithic Architecture  and Microservices (back end)
+    - Monolith
+        - simple, single codebase
+        - single point failure, not good for scaling (large traffic), hard to use different technologies
+    - Microservices
+        - scalable
+        - different technologies, continue development
+        - no single point failure, fault isolation
+- Micro Front ends  (work together with microservices)
+- Data base
+    - Relational data base (SQL): relationships; data consistency; ACID transactions
+    - Non-relational data base (NoSQL): scalability; a lot of read-write; eventually-consistent
+    - NoSQL : graph database, key-value database, time series data base, document-oriented database
+    - CAP theorem: strong consistency vs high availability
+- Caching
+    - caching can be in several places in the architecture
+    - caching strategy:
+        - cache aside , (just cache some data from database, for read-heavy tasks, data **may not be consistent** (since we may write data later after cache loaded))
+        - read through cache  (same as cahce aside but data consistent)
+        - write-through cache (cache aside and updata cache and databsed: for write-heavy task)
+        - write-back cache (only update cache for the moment, update database later, may loose data if clear cache before update database)
+- Message Ques
+    - publish-subscribe model
+    - one-to-one model
+    - Push / Pull for messages
+- Streaming process (data )
+    - data pipeline:  collection+preparation —> process  —> analysis —> visualize —> store
+    - batch processing ;  real-time processing
+    - distributed data process  Apache Zoomkeeper
+    - several software for processing data
+        - Apache Hadoop  (batch process)
+        - Spark; KafKa (real-time proces)
+    - Two architectures
+        - Lambda :  (batch )+(real-time) —> serving layer
+        - Kappa:   (batch, real-time) —> serving
+- P2P architecture (Peer to peer; decentralized )
+    - secure (no central control)
+    - high availability , automatically scale ( no single failure)
